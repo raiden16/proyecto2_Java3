@@ -1,8 +1,8 @@
 
 package com.mycompany.proyecto2.ll.af;
 
-import com.jc.elementos.model.DAOUsuarioImpl;
-import com.jc.elementos.model.Usuario;
+import com.llaf.elementos.model.DAOUsuarioImpl;
+import com.llaf.elementos.model.Usuario;
 import java.util.ArrayList;
 
 

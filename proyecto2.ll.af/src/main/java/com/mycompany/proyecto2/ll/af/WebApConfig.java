@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @Configuration
 @EnableWebMvc
-@ComponentScan({"com.jc.elementos.controller"})
+@ComponentScan({"com.mycompany.proyecto2.ll.af"})
 
  public class WebApConfig extends WebMvcConfigurerAdapter{
     /*

@@ -5,9 +5,9 @@
  */
 package com.mycompany.proyecto2.ll.af;
 
-import com.jc.elementos.controller.*;
+import com.mycompany.proyecto2.ll.af.*;
 
-import com.jc.elementos.model.DAOUsuarioImpl;
+import com.llaf.elementos.model.DAOUsuarioImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

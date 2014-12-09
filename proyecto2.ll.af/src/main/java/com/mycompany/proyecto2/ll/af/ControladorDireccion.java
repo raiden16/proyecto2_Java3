@@ -5,7 +5,7 @@
  */
 package com.mycompany.proyecto2.ll.af;
 
-import com.jc.elementos.model.DAODireccionImpl;
+import com.llaf.elementos.model.DAODireccionImpl;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Map;
