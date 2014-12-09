@@ -18,7 +18,7 @@ import org.hibernate.Transaction;
  *
  * @author campitos
  */
-public class DAODireccionImpl {
+public class DAODireccion {
     
     
     public String obtenerTodos()throws Exception{
@@ -28,11 +28,11 @@ public class DAODireccionImpl {
    Session sesion=    factory.openSession();
   Transaction tranza= sesion.beginTransaction();
  
-Criteria cri=sesion.createCriteria(Direccion.class);
-ArrayList<Direccion> usuarios= (ArrayList<Direccion>)cri.list();
+Criteria cri=sesion.createCriteria(Direcciones.class);
+ArrayList<Direcciones> usuarios= (ArrayList<Direcciones>)cri.list();
 
 ObjectMapper mapper=new ObjectMapper();
-Map<String, ArrayList<Direccion>> singletonMap= Collections.singletonMap("direccion", usuarios);
+Map<String, ArrayList<Direcciones>> singletonMap= Collections.singletonMap("direccion", usuarios);
 
 
   

@@ -7,7 +7,7 @@ package com.mycompany.proyecto2.ll.af;
 
 import com.mycompany.proyecto2.ll.af.*;
 
-import com.llaf.elementos.model.DAOUsuarioImpl;
+import com.llaf.elementos.model.DAOUsuario;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/")
-public class ControladorUsuario {
+public class ControladorUsuarios {
     
     @RequestMapping(value="/usuario", method=RequestMethod.GET, headers={"Accept=Application/json"})
     public @ResponseBody String hola2()throws Exception{
-    DAOUsuarioImpl d=new DAOUsuarioImpl();
+    DAOUsuario d=new DAOUsuario();
     
    String hola= d.obtenerTodos();
        // String hola="hola mundo";
@@ -29,7 +29,7 @@ public class ControladorUsuario {
     
      @RequestMapping(value="/usuario/{id}", method=RequestMethod.GET, headers={"Accept=Application/json"})
     public @ResponseBody String hola3(@PathVariable Integer id)throws Exception{
-    DAOUsuarioImpl d=new DAOUsuarioImpl();
+    DAOUsuario d=new DAOUsuario();
     
    
        // String hola="hola mundo";
@@ -38,7 +38,7 @@ public class ControladorUsuario {
     
     @RequestMapping(value="/usuario/nombre/{nombre}", method=RequestMethod.GET, headers={"Accept=Application/json"})
     public @ResponseBody String buscarPorNOmbre(@PathVariable String nombre)throws Exception{
-    DAOUsuarioImpl d=new DAOUsuarioImpl();
+    DAOUsuario d=new DAOUsuario();
     
    
        // String hola="hola mundo";

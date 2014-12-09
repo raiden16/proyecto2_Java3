@@ -18,11 +18,11 @@ import org.hibernate.criterion.CriteriaQuery;
  *
  * @author campitos
  */
-public class ProbarUsuariosDirecciones {
+public class TestUsuarios_Direcciones {
 
     
     public static void main(String args[])throws Exception{
-        DAOUsuarioImpl du=new DAOUsuarioImpl();
+        DAOUsuario du=new DAOUsuario();
        System.out.println(du.obtenerTodos());
     }
     

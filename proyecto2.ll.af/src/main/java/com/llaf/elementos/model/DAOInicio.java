@@ -9,20 +9,20 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.Configuration;
 
-public class DAO {
+public class DAOInicio {
     
 private static final Logger log = Logger.getAnonymousLogger();
 private static final ThreadLocal session = new ThreadLocal();
 
 private static final SessionFactory sessionFactory = HIbernateUtilidades.getSessionFactory();
         
-   public DAO() {  }
+   public DAOInicio() {  }
                     
     public static Session getSession() {
-          Session session = (Session) DAO.session.get();
+          Session session = (Session) DAOInicio.session.get();
            if (session == null) {
              session = sessionFactory.openSession();
-            DAO.session.set(session);
+            DAOInicio.session.set(session);
                   }
     return session;
    }
@@ -43,12 +43,12 @@ private static final SessionFactory sessionFactory = HIbernateUtilidades.getSess
     } catch( HibernateException e ) {
      log.log(Level.WARNING,"Imposible cerrar",e);
       }
-      DAO.session.set(null);
+      DAOInicio.session.set(null);
    }
 
     public static void close() {
      getSession().close();
-      DAO.session.set(null);
+      DAOInicio.session.set(null);
    }
 
 }

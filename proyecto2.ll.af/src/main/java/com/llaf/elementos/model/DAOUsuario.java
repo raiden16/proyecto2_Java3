@@ -21,7 +21,7 @@ import org.hibernate.criterion.Restrictions;
  *
  * @author campitos
  */
-public class DAOUsuarioImpl {
+public class DAOUsuario {
     
     
     public String obtenerTodos() throws Exception{
@@ -29,11 +29,11 @@ public class DAOUsuarioImpl {
    Session sesion=    factory.openSession();
   Transaction tranza= sesion.beginTransaction();
  
-Criteria cri=sesion.createCriteria(Usuario.class);
+Criteria cri=sesion.createCriteria(Usuarios.class);
 
 
-ArrayList<Usuario> usuarios= (ArrayList<Usuario>)cri.list();
-Map<String, ArrayList<Usuario>> singletonMap =Collections.singletonMap("usuario", usuarios);
+ArrayList<Usuarios> usuarios= (ArrayList<Usuarios>)cri.list();
+Map<String, ArrayList<Usuarios>> singletonMap =Collections.singletonMap("usuario", usuarios);
 
 
 ObjectMapper mapper=new ObjectMapper();
@@ -52,10 +52,10 @@ ObjectMapper mapper=new ObjectMapper();
    Session sesion=    factory.openSession();
   Transaction tranza= sesion.beginTransaction();
  
-Criteria cri=sesion.createCriteria(Usuario.class).add(Restrictions.idEq(id));
+Criteria cri=sesion.createCriteria(Usuarios.class).add(Restrictions.idEq(id));
 
 
-Usuario u=(Usuario)cri.uniqueResult();
+Usuarios u=(Usuarios)cri.uniqueResult();
 
 
 ObjectMapper mapper=new ObjectMapper();
@@ -70,8 +70,8 @@ return mapper.writeValueAsString(u);
    Session sesion=    factory.openSession();
   Transaction tranza= sesion.beginTransaction();
  
-Criteria cri=sesion.createCriteria(Usuario.class).add(Restrictions.idEq(id));
-Usuario usuario= (Usuario)cri.uniqueResult();
+Criteria cri=sesion.createCriteria(Usuarios.class).add(Restrictions.idEq(id));
+Usuarios usuario= (Usuarios)cri.uniqueResult();
 
 ObjectMapper mapper=new ObjectMapper();
 
@@ -90,18 +90,18 @@ ObjectMapper mapper=new ObjectMapper();
    Session sesion=    factory.openSession();
   Transaction tranza= sesion.beginTransaction();
  
-Criteria cri=sesion.createCriteria(Usuario.class).add(Restrictions.like("nombre", nombre+"%"));
-Criteria cri2=sesion.createCriteria(Usuario.class).add(Restrictions.eq("nombre", nombre));
-Criteria cri3=sesion.createCriteria(Usuario.class).add(Restrictions.between("edad", 18,40)).addOrder(Order.asc("nombre"));
-Criteria cri4=sesion.createCriteria(Usuario.class).add(Restrictions.lt("sueldo", new Integer(4000)));
-Criteria cri5=sesion.createCriteria(Usuario.class).add(Restrictions.gt("sueldo", new Integer(4000)));
+Criteria cri=sesion.createCriteria(Usuarios.class).add(Restrictions.like("nombre", nombre+"%"));
+Criteria cri2=sesion.createCriteria(Usuarios.class).add(Restrictions.eq("nombre", nombre));
+Criteria cri3=sesion.createCriteria(Usuarios.class).add(Restrictions.between("edad", 18,40)).addOrder(Order.asc("nombre"));
+Criteria cri4=sesion.createCriteria(Usuarios.class).add(Restrictions.lt("sueldo", new Integer(4000)));
+Criteria cri5=sesion.createCriteria(Usuarios.class).add(Restrictions.gt("sueldo", new Integer(4000)));
 
 
-ArrayList<Usuario> usuarios=(ArrayList<Usuario>) cri.list();
+ArrayList<Usuarios> usuarios=(ArrayList<Usuarios>) cri.list();
 
 ObjectMapper mapper=new ObjectMapper();
 
-Map<String ,ArrayList<Usuario>> singletonMap=Collections.singletonMap("usuarios", usuarios);
+Map<String ,ArrayList<Usuarios>> singletonMap=Collections.singletonMap("usuarios", usuarios);
 
 
 

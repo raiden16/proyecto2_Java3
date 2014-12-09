@@ -5,7 +5,7 @@
  */
 package com.mycompany.proyecto2.ll.af;
 
-import com.llaf.elementos.model.DAODireccionImpl;
+import com.llaf.elementos.model.DAODireccion;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Map;
@@ -21,11 +21,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 @RequestMapping("/")
-public class ControladorDireccion {
+public class ControladorDirecciones {
     
    @RequestMapping(value="/direccion", method=RequestMethod.GET, headers={"Accept=Applicaction/json"})
     public @ResponseBody String todos()throws Exception{
-      DAODireccionImpl di=new DAODireccionImpl();
+      DAODireccion di=new DAODireccion();
      
 return di.obtenerTodos();
     }
