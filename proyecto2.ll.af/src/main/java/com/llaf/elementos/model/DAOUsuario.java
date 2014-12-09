@@ -19,7 +19,7 @@ import org.hibernate.criterion.Restrictions;
 
 /**
  *
- * @author campitos
+ * @author los Paps
  */
 public class DAOUsuario {
     

@@ -18,7 +18,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
  public class WebApConfig extends WebMvcConfigurerAdapter{
     /*
-    Aqui iran configuarciones muy interesantes
+    Aqui nos hace falta algo
     */
     
 }

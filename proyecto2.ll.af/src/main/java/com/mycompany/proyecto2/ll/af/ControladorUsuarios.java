@@ -23,7 +23,7 @@ public class ControladorUsuarios {
     DAOUsuario d=new DAOUsuario();
     
    String hola= d.obtenerTodos();
-       // String hola="hola mundo";
+       
         return hola;
     }
     
@@ -32,7 +32,7 @@ public class ControladorUsuarios {
     DAOUsuario d=new DAOUsuario();
     
    
-       // String hola="hola mundo";
+       
         return d.obtenerPorId(id);
     }
     
@@ -41,7 +41,7 @@ public class ControladorUsuarios {
     DAOUsuario d=new DAOUsuario();
     
    
-       // String hola="hola mundo";
+     
         return d.obtenerPorNOmbre(nombre);
     }
     

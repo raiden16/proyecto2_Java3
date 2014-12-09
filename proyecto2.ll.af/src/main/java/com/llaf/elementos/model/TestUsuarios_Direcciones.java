@@ -16,7 +16,7 @@ import org.hibernate.criterion.CriteriaQuery;
 
 /**
  *
- * @author campitos
+ * @author los Paps
  */
 public class TestUsuarios_Direcciones {
 

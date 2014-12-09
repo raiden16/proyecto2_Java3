@@ -25,7 +25,7 @@ import org.codehaus.jackson.annotate.JsonManagedReference;
 
 /**
  *
- * @author campitos
+ * @author los Paps
  */
 @Entity
 @Table(name = "DIRECCION")

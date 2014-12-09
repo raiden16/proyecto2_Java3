@@ -36,7 +36,7 @@ private static final SessionFactory sessionFactory = HIbernateUtilidades.getSess
       try {
      getSession().getTransaction().rollback();
           } catch( HibernateException e ) {
-     log.log(Level.WARNING,"No se puede hacer el roolback",e);
+     log.log(Level.WARNING,"No se logro el rolback u.u",e);
    }
    try {
     getSession().close();

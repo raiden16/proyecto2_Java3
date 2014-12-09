@@ -14,18 +14,13 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonManagedReference;
 
 /**
  *
- * @author campitos
+ * @author los Paps
  */
 @Entity
 @Table(name = "USUARIO")
@@ -109,7 +104,7 @@ public class Usuarios implements Serializable {
 
     @Override
     public String toString() {
-        return "com.jc.elementos.model.Usuario[ idUsuario=" + idUsuario + " ]";
+        return "com.llaf.elementos.model.Usuarios[ idUsuario=" + idUsuario + " ]";
     }
     
 }
